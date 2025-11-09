@@ -1,9 +1,7 @@
 import re
 from subreddit_query import subreddits , subreddit_query , iphone_keywords , samsung_keywords
-from bert_sentiment import analyze_sentiment_bert
 # === New Sentiment Dictionary (Scale: -10 to 10) ===
 # === Define Search Parameters ===
-# NOTE: Dictionary retained for reference/future fallback, but BERT is now primary method
 
 sentiment_dict = {
 
@@ -96,29 +94,8 @@ def fetch_no_sentiment_posts():
     scroll.config(state=tk.DISABLED)
 
 
-# === BERT-Based Sentiment Analysis Function (Primary Method) ===
+# === Dictionary-Based Sentiment Analysis Function 
 def analyze_sentiment(posts):
-    """
-    Analyze sentiment using BERT transformer model for context-aware classification.
-    This replaces the dictionary-based approach with a more sophisticated NLP model.
-    
-    Args:
-        posts (list): List of text strings to analyze
-    
-    Returns:
-        dict: Dictionary with counts - {"positive": int, "neutral": int, "negative": int}
-    """
-    # Use BERT-based analysis (handles context, sarcasm, multilingual content)
-    return analyze_sentiment_bert(posts)
-
-
-# === OLD Dictionary-Based Sentiment Analysis (Kept for Reference) ===
-# This function is retained but not used - can be restored if needed
-def analyze_sentiment_dictionary(posts):
-    """
-    Legacy dictionary-based sentiment analysis.
-    Kept for reference/fallback purposes.
-    """
     sentiments = {"positive": 0, "neutral": 0, "negative": 0}
 
     for post in posts:

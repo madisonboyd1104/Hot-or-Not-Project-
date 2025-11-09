@@ -23,4 +23,3 @@ def save_to_db(platform, posts, sentiment_data):
         cursor_local.execute("INSERT INTO posts (platform, content, sentiment) VALUES (?, ?, ?)", (platform, post, sentiment))
     conn_local.commit()
     conn_local.close()
-    

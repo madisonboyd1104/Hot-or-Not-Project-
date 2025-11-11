@@ -5,4 +5,4 @@
 export TK_SILENCE_DEPRECATION=1
 
 # Run the application using the virtual environment Python
-.venv/bin/python3 HotOrNot_sentiment5.0.py
+venv/bin/python main.py

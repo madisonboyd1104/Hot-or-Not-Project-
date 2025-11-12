@@ -17,7 +17,7 @@ if [ -d "venv" ]; then
 elif [ -d "../tt5.1/venv" ]; then
     PYTHON_PATH="../tt5.1/venv/bin/python"
 else
-    osascript -e 'display alert "Virtual Environment Not Found" message "Please install dependencies first:\n\npython3 -m venv venv\nvenv/bin/pip install -r requirements.txt" as critical'
+    osascript -e 'display alert "⚠️  Setup Required - Dependencies Not Installed" message "This is your first time running HotOrNot on this computer.\n\nPlease run the setup script first:\n\n1. Open Terminal\n2. Navigate to: '"$WORK_DIR"'\n3. Run: ./setup.sh\n\nSee QUICK_START.txt for detailed instructions." as critical buttons {"Open Instructions", "Cancel"} default button "Open Instructions"' | grep "Open Instructions" && open "$WORK_DIR/QUICK_START.txt"
     exit 1
 fi
 
@@ -26,6 +26,11 @@ fi
 
 # Show error if app crashed
 if [ $? -ne 0 ]; then
-    osascript -e 'display alert "Application Error" message "HotOrNot encountered an error. Check /tmp/hotornot.log for details." as critical'
+    # Check if it's the transformers error
+    if grep -q "No module named 'transformers'" /tmp/hotornot.log; then
+        osascript -e 'display alert "Missing Dependencies" message "Dependencies not installed.\n\nPlease run setup.sh:\n\n1. Open Terminal\n2. cd '"$WORK_DIR"'\n3. ./setup.sh\n\nSee QUICK_START.txt for help." as warning buttons {"Open Instructions", "OK"} default button "Open Instructions"' | grep "Open Instructions" && open "$WORK_DIR/QUICK_START.txt"
+    else
+        osascript -e 'display alert "Application Error" message "HotOrNot encountered an error.\n\nCheck /tmp/hotornot.log for details.\n\nOr see SETUP_FOR_NEW_COMPUTERS.md for troubleshooting." as critical buttons {"View Log", "OK"} default button "OK"' | grep "View Log" && open /tmp/hotornot.log
+    fi
 fi
 

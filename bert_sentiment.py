@@ -3,17 +3,20 @@ BERT-based Sentiment Analysis Module
 Uses pre-trained transformer model for context-aware sentiment classification
 """
 
-from transformers import pipeline
 import warnings
 
 # Suppress warnings for cleaner output
 warnings.filterwarnings('ignore')
 
 # Initialize BERT sentiment analysis pipeline
-print("Initializing BERT sentiment model...")
-print("Note: First run will download ~500MB model (cached for future use)")
+sentiment_pipeline = None
 
 try:
+    from transformers import pipeline
+    
+    print("Initializing BERT sentiment model...")
+    print("Note: First run will download ~500MB model (cached for future use)")
+    
     # Load pre-trained multilingual sentiment model
     # This model outputs 1-5 star ratings which we'll convert to sentiment
     sentiment_pipeline = pipeline(
@@ -23,9 +26,13 @@ try:
         max_length=512
     )
     print("✓ BERT model loaded successfully!")
+except ImportError:
+    print("⚠️  BERT module not available (transformers package not installed)")
+    print("→  Install with: venv/bin/pip install transformers torch")
+    print("→  Falling back to dictionary-based sentiment analysis...")
 except Exception as e:
-    print(f"Error loading BERT model: {e}")
-    print("Falling back to dictionary-based analysis...")
+    print(f"⚠️  Error loading BERT model: {e}")
+    print("→  Falling back to dictionary-based sentiment analysis...")
     sentiment_pipeline = None
 
 

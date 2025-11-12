@@ -12,13 +12,37 @@ A Reddit sentiment analysis tool that compares public opinion on iPhone vs Samsu
 
 ## Setup Instructions
 
-### 1. Create Virtual Environment and Install Dependencies
+### 🚀 Quick Setup (Recommended)
+
+Run the automated setup script:
+
+**macOS/Linux:**
 ```bash
+./setup.sh
+```
+
+**Windows:**
+```bash
+setup.bat
+```
+
+This will automatically create a virtual environment and install all dependencies.
+
+### 📋 Manual Setup (Alternative)
+
+If the automatic setup doesn't work:
+
+```bash
+# Create virtual environment
 python3 -m venv venv
+
+# Install dependencies
 venv/bin/pip install -r requirements.txt
 ```
 
 **Note:** First run will download a ~500MB BERT model for sentiment analysis (cached for future use).
+
+**📖 For detailed setup instructions (especially for new computers), see `SETUP_FOR_NEW_COMPUTERS.md`**
 
 ### 2. Configure Reddit API
 1. Create a Reddit app at https://www.reddit.com/prefs/apps

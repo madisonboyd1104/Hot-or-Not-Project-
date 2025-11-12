@@ -1,0 +1,61 @@
+╔═══════════════════════════════════════════════════════════════════════════════╗
+║                   HotOrNot Sentiment Analyzer - QUICK START                   ║
+║                         Reddit iPhone vs Samsung Analysis                      ║
+╚═══════════════════════════════════════════════════════════════════════════════╝
+
+📋 REQUIREMENTS:
+   • Python 3.7 or higher
+   • Internet connection (for initial setup)
+   • ~1.2GB disk space for dependencies
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🚀 STEP 1: INSTALL DEPENDENCIES (one-time setup)
+
+   macOS/Linux:
+      ./setup.sh
+
+   Windows:
+      Double-click setup.bat
+
+   This takes 5-10 minutes. Only needs to be done once!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+▶️  STEP 2: RUN THE APP
+
+   macOS:
+      • Double-click: Start_HotOrNot.command
+      • Or: HotOrNot.app
+
+   Windows:
+      • Double-click: run.bat
+
+   First run will download a ~500MB AI model (happens once, then cached).
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+⚠️  COMMON ISSUE: "No module named 'transformers'"
+
+   CAUSE: You didn't run setup.sh or setup.bat first!
+   
+   FIX: Run the setup script (see Step 1 above)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📖 NEED MORE HELP?
+
+   • Detailed setup: SETUP_FOR_NEW_COMPUTERS.md
+   • How to run: HOW_TO_RUN.md
+   • Full documentation: README.md
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎯 LOGIN CREDENTIALS (default):
+   Username: admin
+   Password: password
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+That's it! Enjoy analyzing Reddit sentiment! 🎉
+

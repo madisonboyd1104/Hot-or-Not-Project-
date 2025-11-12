@@ -22,23 +22,35 @@ Choose one of these options:
 
 ## First Time Setup
 
+### ⚠️ IMPORTANT: Run Setup First!
+
+**Before running the app for the first time**, you need to install dependencies:
+
+#### On macOS/Linux:
+```bash
+./setup.sh
+```
+
+#### On Windows:
+```bash
+setup.bat
+```
+
+This only needs to be done **once per computer**. The setup script will:
+- Create a virtual environment
+- Install all required packages (praw, matplotlib, transformers, torch)
+- Verify everything is working
+
+**📖 For detailed setup instructions, see `SETUP_FOR_NEW_COMPUTERS.md`**
+
+---
+
 ### macOS Security Note
 The first time you run the app on macOS:
 1. Right-click the file (e.g., `Start_HotOrNot.command` or `HotOrNot.app`)
 2. Choose **"Open"** from the menu
 3. Click **"Open"** in the security dialog that appears
 4. After this, you can simply double-click the file normally!
-
-### Install Dependencies (if needed)
-If you get an error about missing packages:
-
-```bash
-# Create virtual environment
-python3 -m venv venv
-
-# Install all dependencies
-venv/bin/pip install -r requirements.txt
-```
 
 **Note:** The first run will download a ~500MB BERT model for advanced sentiment analysis. This is cached for future use, so subsequent runs will be much faster!
 

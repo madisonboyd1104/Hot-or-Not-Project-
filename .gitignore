@@ -4,33 +4,87 @@ __pycache__/
 *$py.class
 *.so
 .Python
-*.egg-info/
-dist/
-build/
-*.egg
 
 # Virtual Environment
 venv/
-env/
 ENV/
+env/
+.venv
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
 
 # IDE
 .vscode/
 .idea/
 *.swp
 *.swo
-
-# macOS
-.DS_Store
-.AppleDouble
-.LSOverride
-
-# Database
-*.db
-
-# Config (if contains sensitive data)
-# config.ini
+*~
 
 # Logs
 *.log
+/tmp/
 
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Unit test / coverage
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pyenv
+.python-version
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Model cache (BERT models will be re-downloaded per user)
+.cache/
+transformers_cache/
+
+# Reddit API config (remove if you want to share credentials)
+# config.ini

@@ -36,7 +36,7 @@ except Exception as e:
     print("Falling back to dictionary-based analysis...")
     sentiment_pipeline = None
 
-#Kayla Council worked on this definition and made edits
+#Kayla Council worked on this definition and made edits and Tyson Satterwhite made minor edits
 def analyze_sentiment_bert(posts):
     """
     This analyzes the sentiment based on a list of text from the Reddit posts. 
@@ -91,7 +91,7 @@ def analyze_sentiment_bert(posts):
     
     return sentiments
 
-#Kayla Council made minor edits to this definition
+#Tyson Satterwhite worked on this and Kayla Council made minor edits to this definition
 def get_sentiment_with_confidence(text):
     """
     This analyzes an individual post and them returns the sentiment, confidence, and star rating.

@@ -1,4 +1,4 @@
 @echo off
 REM Run the Reddit Sentiment Analysis GUI
-python main.py
+venv\Scripts\python.exe main.py
 pause

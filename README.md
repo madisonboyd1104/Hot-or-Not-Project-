@@ -28,12 +28,12 @@ pip install -r requirements.txt
 
 ### 3. Run the Application
 ```bash
-python HotOrNot_sentiment5.0.py
+python main.py
 ```
 
 Or use the provided scripts:
-- **macOS/Linux:** `./run.sh`
-- **Windows:** `run.bat`
+- **macOS/Linux:** `setup.command` , then `run.command`
+- **Windows:** `setup.sh`, then `run.sh`
 
 ## Login Credentials
 Default login:

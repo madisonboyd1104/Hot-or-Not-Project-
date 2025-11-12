@@ -108,8 +108,15 @@ def analyze_sentiment(posts):
     Returns:
         dict: Dictionary with counts - {"positive": int, "neutral": int, "negative": int}
     """
+    # Ensures BERT is functional; falls back to dictionary if issues arise (David Jackson)
+    try:
+        return analyze_sentiment_bert(posts)
+    except Exception as e:
+        print(f"BERT failed, falling back to dictionary-based analysis: {e}")
+        return analyze_sentiment_dictionary(posts)
+
     # Use BERT-based analysis (handles context, sarcasm, multilingual content)
-    return analyze_sentiment_bert(posts)
+    #return analyze_sentiment_bert(posts)
 
 
 # === OLD Dictionary-Based Sentiment Analysis (Kept for Reference) ===

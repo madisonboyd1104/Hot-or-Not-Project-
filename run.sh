@@ -1,3 +1,4 @@
+#Created by Howard Ames III
 #!/bin/bash
 # HotOrNot Sentiment Analyzer Startup Script
 

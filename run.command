@@ -1,4 +1,5 @@
 #!/bin/bash
+# Created by Howard Ames III
 # HotOrNot Sentiment Analyzer Startup Script
 
 # Navigate to the script's directory
@@ -9,7 +10,7 @@ export TK_SILENCE_DEPRECATION=1
 
 # Check if virtual environment exists
 if [ ! -d "venv" ]; then
-    echo "❌ Error: Virtual environment not found!"
+    echo " Error: Virtual environment not found!"
     echo "Please run setup.command first to install dependencies."
     read -p "Press any key to exit..."
     exit 1

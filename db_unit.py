@@ -1,5 +1,7 @@
 import sqlite3
 # === Initialize SQLite Database ===
+# Updated by Howard Ames III for BERT integration
+
 def build_db():
     conn = sqlite3.connect("reddit_sentiment.db")
     cursor = conn.cursor()

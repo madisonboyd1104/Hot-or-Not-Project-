@@ -3,13 +3,13 @@ This is the bert_sentiment.py file
 
 This performs a sentiment analysis using a BERT model that's pre-trained.
 
-This new approach replaces the old dictionary-based approach. This new approach has a
+This new approach replaces the old dictionary based approach. This new approach has a
 model that's aware of the context of the posts. It also understands tone and sarcasm as
 well as how a word is phrased. It also predicts a 1-5 star rating and then it's converted
 into either a positive or negative sentiment.
 
 """
-
+#Howard Ames III did the planning and staging of the ML integration 
 from transformers import pipeline
 import warnings
 
@@ -18,7 +18,7 @@ warnings.filterwarnings('ignore')
 
 # Initialize BERT sentiment analysis pipeline
 print("Initializing BERT sentiment model...")
-print("Note: First run will download ~500MB model (cached for future use)")
+print("Note: First run will download ~500MB model (will be cached for future use)")
 
 
 #This loads the BERT model when this module is imported.
@@ -30,7 +30,7 @@ try:
         truncation=True,
         max_length=512
     )
-    print("✓ BERT model loaded successfully!")
+    print(" BERT model loaded successfully!")
 except Exception as e:
     print(f"Error loading BERT model: {e}")
     print("Falling back to dictionary-based analysis...")
